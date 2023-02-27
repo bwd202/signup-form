@@ -1,58 +1,57 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
- display: flex;
- height: 100vh;
- width: 100vw;
  background-color: black;
+ display: flex;
+ height: max(100vh,490px);
+ width: max(100vw,780px);
+ /* stops contents from shrinking when screen is less than 780px wide */
 }
 
 body * {
     background-color: white;
 }
 
-img {
-    width: 100%;
-    /* height: auto; */
+.page-wrap {
+    display: flex;
+    margin: 0 auto;
+    width: max(80%, 1000px);
+    /* this acts like a media query, when the screen width is less than 1000px, the div becomes 100% of its parent, i.e. the body element */
     height: 100%;
-}
+    overflow: hidden;
+    /* gets rid of page overflows created by image? */
+   }
 
-main, aside {
-    height: ;
+img {
+    display: block;
+    width: 100%;
+    /* using max-width leaves a gap */
+    height: max(100vh,500px);
+    /* to keep img from shrinking vertically when screen is less than 500px */
 }
 
 main {
-    width: 66%;
+    display: flex;
+    flex-direction: column;
     flex: 3;
 }
 
 header, article, footer {
-    height: 33%;
+    flex: 1;
 }
 
 header ~ * {
     border-top: 1px red dashed;
 }
 aside {
-    width: 33%;
-    flex: 2;
-}
-
-.page-wrap {
- display: flex;
- margin: 0 auto;
- width: 75%;
- height: 100%;
- overflow: hidden;
- /* gets rid of gap at page bottom */
+    flex: 1.5;
 }
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1000px) {
    
 }
