@@ -11,15 +11,11 @@ body {
  /* stops contents from shrinking when screen is less than 780px wide */
 }
 
-body * {
-    background-color: white;
-}
-
 .page-wrap {
     display: flex;
     margin: 0 auto;
-    width: max(80%, 1000px);
-    /* this acts like a media query, when the screen width is less than 1000px, the div becomes 100% of its parent, i.e. the body element */
+    width: clamp(800px, 70%, 1200px);
+    /* above acts like a media query, it will set the width to 70% unless that is less than 800px, in which case the width will be set to 800px. If it is more than 1200px, it will be set to that */
     height: 100%;
     overflow: hidden;
     /* gets rid of page overflows created by image? */
@@ -37,17 +33,58 @@ main {
     display: flex;
     flex-direction: column;
     flex: 3;
+    background-color: bisque;
 }
 
-header, article, footer {
+aside {
+    flex: 1.5;
+}
+/* HEADER */
+
+h1 {
+    margin-bottom: 13px;
+}
+
+header {
+    padding: 18% 12% 6% 5%;
     flex: 1;
 }
 
-header ~ * {
-    border-top: 1px red dashed;
+/* ARTICLE & FORM */
+
+article {
+    padding: 3% 12% 3% 5%;
+    flex: 2;
 }
-aside {
-    flex: 1.5;
+
+article h2 {
+    margin-bottom: 13px;
+}
+
+form {
+    display: flex;
+}
+
+form section {
+    flex: 1;
+    /* to separate both sections while filling up container */
+}
+
+form section * {
+    display: block;
+    padding: 3px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 5% 20% 10% 5%;
+    flex: 1;
+}
+
+button {
+    padding: 5px 20px;
+    margin-bottom: 20px;
 }
 
 /* MEDIA QUERIES */

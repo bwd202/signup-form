@@ -19,9 +19,43 @@
         />
       </aside>
       <main>
-        <header></header>
-        <article></article>
-        <footer></footer>
+        <header>
+          <h1>The Art Bonsai</h1>
+          <p>
+            Learn how to plant, grow and style your bonsai using ancient
+            traditional techniques from Japan!
+          </p>
+        </header>
+        <article>
+          <h2>Start today for free!</h2>
+          <form action="" method="post" id="signup-form">
+            <section class="left">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" required />
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+              <label for="pwd">Password</label>
+              <input type="password" id="pwd" name="pwd" required />
+            </section>
+            <section class="right">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" required />
+              <label for="phone">Phone Number (optional)</label>
+              <input type="tel" id="phone" name="phone" />
+              <label for="pwd-confirm">Confirm Password</label>
+              <input
+                type="password"
+                id="pwd-confirm"
+                name="pwd-confirm"
+                required
+              />
+            </section>
+          </form>
+        </article>
+        <footer>
+          <button type="submit" form="signup-form">Create Account</button>
+          <p>Already have an account?<a href="#">Log in</a></p>
+        </footer>
       </main>
     </div>
   </body>
