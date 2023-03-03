@@ -43,6 +43,12 @@ main {
     background-color: #F3E0B5;
 }
 
+/* ASIDE */
+
+div.logo {
+    position: relative;
+}
+
 aside {
     flex: 1.5;
 }
