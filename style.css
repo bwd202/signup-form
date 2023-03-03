@@ -1,18 +1,10 @@
-:root {
---ebony: rgb(165, 173, 149);
---caf-noir: hsla(32, 31%, 26%, 1);
---beaver: hsla(28, 29%, 55%, 1);
---linen: rgb(250, 223, 201);
---black-olive: rgb(37, 37, 27);
-}
-
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
- background-color: var(--black-olive);
+ background-color: #4C4B16;
  display: flex;
  height: max(100vh,490px);
  width: max(100vw,780px);
@@ -27,6 +19,7 @@ body {
     height: 100%;
     overflow: hidden;
     /* gets rid of page overflows created by image? */
+    border: 2px solid #FECD70;
    }
 
 img {
@@ -41,7 +34,7 @@ main {
     display: flex;
     flex-direction: column;
     flex: 3;
-    background-color: var(--linen);
+    background-color: #F3E0B5;
 }
 
 aside {
@@ -57,7 +50,7 @@ h1 {
 header {
     padding: 18% 12% 6% 5%;
     flex: 1;
-    background-color: var(--ebony);
+    background-color: #E3C770;
 }
 
 /* ARTICLE & FORM */
@@ -94,12 +87,13 @@ input {
 footer {
     padding: 5% 20% 10% 5%;
     flex: 1;
-    background-color: var(--ebony);
+    background-color: #E3C770;
 }
 
 button {
     padding: 5px 20px;
     margin-bottom: 20px;
+    background-color: #FFAE6D;
 }
 
 /* MEDIA QUERIES */
