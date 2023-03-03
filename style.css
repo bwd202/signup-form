@@ -1,9 +1,15 @@
+@font-face {
+    font-family: Norse-Bolt;
+    src: url(Norse-Bold.otf);
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
+font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
  background-color: #4C4B16;
  display: flex;
  height: max(100vh,490px);
