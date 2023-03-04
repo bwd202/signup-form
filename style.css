@@ -1,5 +1,11 @@
+:root {
+    --yellow: #ffde7c;
+    --beige: #f8ebcd;
+}
+
+
 @font-face {
-    font-family: Norse-Bolt;
+    font-family: Norse-Bold;
     src: url(Norse-Bold.otf);
 }
 
@@ -10,7 +16,7 @@
 
 body {
 font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
- background-color: #4C4B16;
+ background-color: #252209;
  display: flex;
  height: max(100vh,490px);
  width: max(100vw,780px);
@@ -20,19 +26,17 @@ font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple
 .page-wrap {
     display: flex;
     margin: 0 auto;
-    width: clamp(800px, 70%, 1200px);
+    width: clamp(800px, 80%, 1300px);
     /* above acts like a media query, it will set the width to 70% unless that is less than 800px, in which case the width will be set to 800px. If it is more than 1200px, it will be set to that */
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
     /* gets rid of page overflows created by image? */
-    border: 2px solid #FECD70;
    }
 
 img {
-    display: block;
     width: 100%;
     /* using max-width leaves a gap */
-    height: max(100vh,500px);
+    height: max(100%,700px);
     /* to keep img from shrinking vertically when screen is less than 500px */
 }
 
@@ -40,17 +44,42 @@ main {
     display: flex;
     flex-direction: column;
     flex: 3;
-    background-color: #F3E0B5;
 }
 
 /* ASIDE */
 
 div.logo {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    color: initial;
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    height: 120px;
+    padding: 2%;
+    background-color: #252209;
+    opacity: 40%;
+}
+
+.logo img {
+    width: 80px;
+    max-height: 100px;
+    margin: auto 0;
+    /* to center vertically */
+}
+
+.logo p {
+    margin: auto 0;
+    color: white;
+    font-family: Norse-Bold;
+    font-size: 4rem;
 }
 
 aside {
-    flex: 1.5;
+    position: relative;
+    flex: 2;
+    overflow: hidden;
+    /* hides .logo's right side */
 }
 
 /* HEADER */
@@ -62,7 +91,7 @@ h1 {
 header {
     padding: 18% 12% 6% 5%;
     flex: 1;
-    background-color: #E3C770;
+    background-color: var(--yellow);
 }
 
 /* ARTICLE & FORM */
@@ -70,6 +99,7 @@ header {
 article {
     padding: 3% 12% 3% 5%;
     flex: 2;
+    background-color: var(--beige);
 }
 
 article h2 {
@@ -90,8 +120,8 @@ form section * {
     padding: 3px;
 }
 
-input {
-    border-color: #5e4f41;
+input:focus {
+    border: 3px blue solid;
 }
 
 /* FOOTER */
@@ -99,13 +129,19 @@ input {
 footer {
     padding: 5% 20% 10% 5%;
     flex: 1;
-    background-color: #E3C770;
+    background-color: var(--yellow);
+}
+
+footer a {
+    margin-left: 5px;
 }
 
 button {
     padding: 5px 20px;
     margin-bottom: 20px;
     background-color: #FFAE6D;
+    border-radius: 8px;
+    font-size: inherit;
 }
 
 /* MEDIA QUERIES */
