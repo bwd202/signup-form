@@ -1,44 +1,45 @@
-:root {
-    background-color: black;
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* border: 1px red dashed; */
 }
-
 
 body {
-    display: flex;
-    height: 100vh;
-    width: 80%;
-    background-color: white;
-    margin: 0 auto;
+    background-color: black;
 }
 
-/* MAIN */
+
+.inner-container {
+    background-color: white;
+    display: flex;
+    width: 80%;
+    min-width: 1200px;
+    margin: auto;
+    min-height: 100vh;
+}
 
 main {
-    flex: 3;
     display: flex;
     flex-direction: column;
-    min-height: 900px;
-    min-width: 600px;
-}
-
-header, footer, article {
-    flex: 1;
+    flex: 2;
 }
 
 aside {
     display: flex;
-    flex: 2;
+    flex: 1;
+    /* max-height: 100vh; */
 }
 
-aside > img {
-    min-height: 900px;
-    min-width: 100%;
+img {
+    flex: 1;
+    /* so that img can cover the gap that appears to its right as the img shrinks with decreasing viewport height */
+    max-height: 100vh;
+    /* otherwise overflows body and causes y-scroll bar */
 }
-  
+
+header, article, footer {
+    flex: 1;
+}
+
 
