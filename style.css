@@ -35,7 +35,9 @@ img {
     flex: 1;
     /* so that img can cover the gap that appears to its right as the img shrinks with decreasing viewport height */
     max-height: 100vh;
-    /* otherwise overflows body and causes y-scroll bar */
+    /* to keep from overflowing container, which causes scroll bar */
+    min-height: 700px;
+    /* to keep from screwing aspect ratio too much; might want to use smaller scale img at this point */
 }
 
 header, article, footer {
