@@ -1,151 +1,44 @@
 :root {
-    --yellow: #ffde7c;
-    --beige: #f8ebcd;
-}
-
-
-@font-face {
-    font-family: Norse-Bold;
-    src: url(Norse-Bold.otf);
+    background-color: black;
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+
 body {
-font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
- background-color: #252209;
- display: flex;
- height: max(100vh,490px);
- width: max(100vw,780px);
- /* stops contents from shrinking when screen is less than 780px wide */
-}
-
-.page-wrap {
     display: flex;
-    margin: 0 auto;
-    width: clamp(800px, 80%, 1300px);
-    /* above acts like a media query, it will set the width to 70% unless that is less than 800px, in which case the width will be set to 800px. If it is more than 1200px, it will be set to that */
     height: 100vh;
-    overflow: hidden;
-    /* gets rid of page overflows created by image? */
-   }
-
-img {
-    width: 100%;
-    /* using max-width leaves a gap */
-    height: max(100%,700px);
-    /* to keep img from shrinking vertically when screen is less than 500px */
+    width: 80%;
+    background-color: white;
+    margin: 0 auto;
 }
+
+/* MAIN */
 
 main {
+    flex: 3;
     display: flex;
     flex-direction: column;
-    flex: 3;
+    min-height: 900px;
+    min-width: 600px;
 }
 
-/* ASIDE */
-
-div.logo {
-    display: flex;
-    justify-content: center;
-    color: initial;
-    position: absolute;
-    top: 150px;
-    width: 100%;
-    height: 120px;
-    padding: 2%;
-    background-color: #252209;
-    opacity: 40%;
-}
-
-.logo img {
-    width: 80px;
-    max-height: 100px;
-    margin: auto 0;
-    /* to center vertically */
-}
-
-.logo p {
-    margin: auto 0;
-    color: white;
-    font-family: Norse-Bold;
-    font-size: 4rem;
+header, footer, article {
+    flex: 1;
 }
 
 aside {
-    position: relative;
-    flex: 2;
-    overflow: hidden;
-    /* hides .logo's right side */
-}
-
-/* HEADER */
-
-h1 {
-    margin-bottom: 13px;
-}
-
-header {
-    padding: 18% 12% 6% 5%;
-    flex: 1;
-    background-color: var(--yellow);
-}
-
-/* ARTICLE & FORM */
-
-article {
-    padding: 3% 12% 3% 5%;
-    flex: 2;
-    background-color: var(--beige);
-}
-
-article h2 {
-    margin-bottom: 13px;
-}
-
-form {
     display: flex;
+    flex: 2;
 }
 
-form section {
-    flex: 1;
-    /* to separate both sections while filling up container */
+aside > img {
+    min-height: 900px;
+    min-width: 100%;
 }
+  
 
-form section * {
-    display: block;
-    padding: 3px;
-}
-
-input:focus {
-    border: 3px blue solid;
-}
-
-/* FOOTER */
-
-footer {
-    padding: 5% 20% 10% 5%;
-    flex: 1;
-    background-color: var(--yellow);
-}
-
-footer a {
-    margin-left: 5px;
-}
-
-button {
-    padding: 5px 20px;
-    margin-bottom: 20px;
-    background-color: #FFAE6D;
-    border-radius: 8px;
-    font-size: inherit;
-}
-
-/* MEDIA QUERIES */
-
-@media screen and (max-width: 1000px) {
-   
-}
