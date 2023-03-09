@@ -64,7 +64,8 @@ header {
 }
 
 h1 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    font-weight: 900;
 }
 
 header p {
@@ -120,8 +121,13 @@ footer {
     /* added here because it was not 'working' in the article: would have to add margin bottom or alter z-index to make shadow appear */
 }
 
+footer p {
+    font-size: 0.8em;
+}
+
 button {
-    font-size: 1em;
+    font-size: 0.8em;
+    font-weight: 900;
     margin-bottom: 30px;
     padding: 6px 32px;
     background-color: var(--green);
