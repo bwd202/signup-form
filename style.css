@@ -1,3 +1,9 @@
+:root {
+    --green: rgb(212, 247, 212);
+    --grey: rgb(248, 245, 245);
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -42,6 +48,47 @@ img {
 
 header, article, footer {
     flex: 1;
+    padding-left: 3rem;
 }
 
+header {
+    padding-top: 16%;
+    background-color: var(--grey);
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+article {
+    padding-top: 3%;
+}
+
+article h2 {
+    margin-bottom: 30px;
+}
+
+section {
+    display: inline-block;
+    /* so that right section does not 'overlap' left */
+}
+
+section > * {
+    display: block;
+}
+
+    section.left {
+    float: left;
+    margin-right: 100px;
+}
+
+footer {
+    padding-top: 3%;
+    background-color: var(--grey);
+}
+
+button {
+    margin-bottom: 30px;
+    padding: 6px 32px;
+}
 
