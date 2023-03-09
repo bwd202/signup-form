@@ -62,6 +62,7 @@ h1 {
 
 article {
     padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 article h2 {
@@ -77,14 +78,28 @@ section > * {
     display: block;
 }
 
-    section.left {
+section.left {
     float: left;
     margin-right: 100px;
+}
+
+/* FORM */
+
+label + input {
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
+input:focus {
+    /* box-shadow: inset 1px 1px 1px red; */
+    /* border: 3px red solid; */
 }
 
 footer {
     padding-top: 3%;
     background-color: var(--grey);
+    box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.2);
+    /* added here because it was not 'working' in the article: had to add margin bottom or alter z-index to make shadow appear */
 }
 
 button {
