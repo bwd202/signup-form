@@ -1,6 +1,8 @@
 :root {
-    --green: rgb(212, 247, 212);
+    --green: rgb(84, 179, 84);
     --grey: rgb(248, 245, 245);
+    --shadow: rgba(0,0,0,0.2);
+    --dark-green: rgb(33, 117, 33);
 }
 
 
@@ -8,11 +10,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* border: 1px red dashed; */
+    /* border: 1px red dotted; */
 }
 
 body {
     background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
 
 
@@ -48,11 +52,12 @@ img {
 
 header, article, footer {
     flex: 1;
-    padding-left: 3rem;
+    padding-left: 1rem;
 }
 
 header {
     padding-top: 16%;
+    padding-bottom: 3%;
     background-color: var(--grey);
 }
 
@@ -60,8 +65,13 @@ h1 {
     margin-bottom: 30px;
 }
 
+header p {
+    width: 80%;
+    /* so that it does not span the whole container width-wise */
+}
+
 article {
-    padding-top: 3%;
+    padding-top: 5%;
     padding-bottom: 3%;
 }
 
@@ -88,22 +98,45 @@ section.left {
 label + input {
     margin-top: 2px;
     margin-bottom: 8px;
+    height: 23px;
+    border: 1px gray solid;
+    outline: none;
+    /* removes black 'border' shown during focus */
 }
 
 input:focus {
-    /* box-shadow: inset 1px 1px 1px red; */
+    box-shadow: 2px 2px 2px var(--shadow);
+    border-color: blue;
     /* border: 3px red solid; */
 }
 
 footer {
-    padding-top: 3%;
+    padding-top: 5%;
     background-color: var(--grey);
     box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.2);
-    /* added here because it was not 'working' in the article: had to add margin bottom or alter z-index to make shadow appear */
+    /* added here because it was not 'working' in the article: would have to add margin bottom or alter z-index to make shadow appear */
 }
 
 button {
+    font-size: 1em;
     margin-bottom: 30px;
     padding: 6px 32px;
+    background-color: var(--green);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+a {
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--green);
+}
+
+a:link {
+    color: red;
 }
 
