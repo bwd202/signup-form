@@ -39,6 +39,7 @@ aside {
     display: flex;
     flex: 1;
     /* max-height: 100vh; */
+    /* because if not set the page's y-scroll bar shows up */
 }
 
 img {
@@ -46,13 +47,14 @@ img {
     /* so that img can cover the gap that appears to its right as the img shrinks with decreasing viewport height */
     max-height: 100vh;
     /* to keep from overflowing container, which causes scroll bar */
-    min-height: 700px;
+    min-height: 900px;
     /* to keep from screwing aspect ratio too much; might want to use smaller scale img at this point */
+    /* anything smaller than 900px will leave gaps on the bottom as you decrease viewport height */
 }
 
 header, article, footer {
     flex: 1;
-    padding-left: 1rem;
+    padding-left: 2em;
 }
 
 header {
@@ -112,6 +114,7 @@ input:focus {
 
 footer {
     padding-top: 5%;
+    padding-bottom: 10%;
     background-color: var(--grey);
     box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.2);
     /* added here because it was not 'working' in the article: would have to add margin bottom or alter z-index to make shadow appear */
