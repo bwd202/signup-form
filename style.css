@@ -9,10 +9,13 @@
 }
 
 :root {
-    --green: rgb(84, 179, 84);
-    --grey: rgb(248, 245, 245);
+    --green: #00b894;
+    --dark-green: #006350;
+    --grey: #fafafa;
     --shadow: rgba(0,0,0,0.2);
-    --dark-green: rgb(33, 117, 33);
+    --font-color: #2d3436;
+    --btn-color: #FA9030;
+    --btn-hover: #D06505;
 }
 
 @media screen and (max-width: 1200px) {
@@ -31,6 +34,7 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;
         font-family: 'latoregular', Arial, Helvetica, sans-serif;
+        color: var(--font-color);
     }
     
     
@@ -117,19 +121,20 @@
     /* FORM */
     
     label + input {
-        margin-top: 2px;
+        margin-top: 3px;
         margin-bottom: 8px;
         height: 23px;
-        border: 1px gray solid;
+        border: 1px var(--font-color) solid;
         outline: none;
         /* removes black 'border' shown during focus */
         border-radius: 8px;
+        width: 200px;
+        /* to prevent janky movement when clicking on opposite section input */
     }
     
     input:focus {
         box-shadow: 2px 2px 2px var(--shadow);
-        border-color: blue;
-        /* border: 3px red solid; */
+        border: 2px var(--dark-green)solid;
     }
     
     footer {
@@ -149,10 +154,14 @@
         font-weight: bold;
         margin-bottom: 30px;
         padding: 6px 32px;
-        background-color: var(--green);
-        color: white;
+        background-color: var(--btn-color);
+        color: var(--grey);
         border-radius: 8px;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+        background-color: var(--btn-hover);
     }
     
     a {
@@ -161,9 +170,9 @@
     }
     
     a:visited {
-        color: var(--green);
+        color: var(--dark-green);
     }
     
     a:link {
-        color: red;
+        color: var(--green);
     }
