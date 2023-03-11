@@ -12,10 +12,11 @@
     --green: #00b894;
     --dark-green: #006350;
     --grey: #fafafa;
-    --shadow: rgba(0,0,0,0.2);
-    --font-color: #2d3436;
+    --shadow: rgba(0,0,0,0.3);
+    --overlay: rgba(0,0,0,0.5);
     --btn-color: #FA9030;
     --btn-hover: #D06505;
+    --font-color: black;
 }
 
 @media screen and (max-width: 1200px) {
@@ -54,6 +55,8 @@
     }
     
     aside {
+        position: relative;
+        /* to control overlay */
         display: flex;
         flex: 1;
         /* max-height: 100vh; */
@@ -69,6 +72,17 @@
         /* to keep from screwing aspect ratio too much; might want to use smaller scale img at this point */
         /* anything smaller than 900px will leave gaps on the bottom as you decrease viewport height */
     }
+
+    .overlay {
+        width: 100%;
+        color: white;
+        background-color: var(--overlay);
+        position: absolute;
+        /* to position on top of image (aside) */
+        top: 235px;
+        text-align: center;
+        padding: 20px 0;
+    }
     
     header, article, footer {
         flex: 1;
@@ -76,14 +90,14 @@
     }
     
     header {
-        padding-top: 16%;
+        padding-top: 13%;
         padding-bottom: 3%;
         background-color: var(--grey);
     }
     
     h1 {
-        margin-bottom: 20px;
-        font-size: 3em;
+        /* margin-bottom: 20px; */
+        font-size: 2.5em;
         font-weight: lighter;
     }
     
@@ -92,16 +106,17 @@
         /* so that it does not span the whole container width-wise */
         line-height: 150%;
         /* to increase legibility */
+        padding: 5px;
     }
     
     article {
-        padding-top: 5%;
+        padding-top: 3%;
         padding-bottom: 3%;
     }
     
-    article h2 {
+    h2 {
         margin-bottom: 30px;
-        font-weight: lighter;
+        /* font-weight: lighter; */
     }
     
     section {
